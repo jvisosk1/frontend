@@ -1,0 +1,151 @@
+body {
+  font-size: 16px;
+  color: black;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+    height: 80px;
+  }
+
+/** HEADER **/
+#header-nav {
+  background-color: grey;
+  border: 2px solid grey;
+  border-bottom: 2px solid black;
+  border-radius: 0;
+}
+
+.navbar-brand {
+  padding-top: 25px;
+}
+
+.navbar-brand h1 { /* Restaurant name */
+  font-family: 'Times New Roman', serif;
+  color: black;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+
+.navbar-brand p { /* Kosher cert */
+  color: #000;
+  text-transform: uppercase;
+  font-size: .7em;
+  margin-top: 15px;
+}
+.navbar-brand p span { /* Star-K */
+  vertical-align: middle;
+}
+.navbar-nav > li > a {
+  padding: 5px;
+}
+
+#nav-list {
+  margin-top: 18px;
+}
+#nav-list a {
+  color: black;
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+
+}
+#nav-list a:hover {
+  background: lightgrey;
+}
+#nav-list a span {
+  font-size: 1.8em;
+}
+
+
+/*styling for menu button in small window*/
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid black;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+/* END HEADER */
+
+/* HOME PAGE */
+
+#menu-tile {
+  height: 700px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+span a {
+  color: darkblue;
+  text-decoration: underline;
+}
+span {
+  padding-left: 20px;
+}
+.link-to-top {
+  padding: 20px;
+}
+h3 {
+  text-align: center;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+#menu-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-tile {
+  background-position: center;
+  background-color: grey;
+}
+
+#menu-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  opacity: .8;
+}
+#test-id {
+  color: blue;
+}
+
+.col-md-4 .col-sm-12 .col-xs-12 {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+/* END HOME PAGE */
+
+@media (min-width: 768px) {
+  /* Header */
+  #menu-tile {
+    margin: 0 auto 15px;
+  }
+  #nav-list {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Header */
+  #menu-tile {
+    margin: 0 auto 15px;
+    width: 80%;
+  }
+  #menu-pop-out-space{
+    margin-bottom: 80px;
+  }
+  .collapse{
+    top: 50px;
+  }
+}
+
