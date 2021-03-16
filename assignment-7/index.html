@@ -16,7 +16,7 @@
 
       <ul>
         <li ng-repeat="item in showList.items">
-          Buy {{ item.quantity }} {{ item.name }} 
+          Buy {{ item.quantity }} {{ item.name }} ($$${{ item.pricePerItem}} each)
           <button ng-click="showList.removeItem($index);">Buy</button>
         </li>
       </ul>
@@ -28,8 +28,8 @@
       <ul>
     
         <li ng-repeat="myItem in showBoughtList.items">
-          You bought {{ myItem.quantity }} {{ myItem.name }} for total price 
-          $$${{myItem.quantity * myItem.pricePerItem}}
+          Bought {{ myItem.quantity }} {{ myItem.name }} for total price of
+          $$${{myItem.quantity * myItem.pricePerItem}}.00.
         </li>
       </ul>
     </div>
