@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app='MenuCategoriesApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Using $http Service</title>
+    <style type="text/css">
+    	table, th, td {
+  			border: 1px solid black;
+  			border-collapse: collapse;
+		}   	
+    </style>
+  </head>
+  <body>
+    <h1>Using $http Service</h1>
+
+    <div ng-controller='MenuCategoriesController as menu'>
+      <h3>List of Menu Categories</h3>
+      <table style="width:50%">
+		  <tr style="text-align: left">
+		    <th>Shortname</th>
+		    <th>Name</th>
+		    <th>Description</th>
+		  </tr>
+		  <tr ng-repeat="menu_item in menu.items.menu_items">
+		  	<td>{{menu_item.short_name}}</td>
+		  	<td>{{menu_item.name}}</td>
+		  	<td>{{menu_item.description}}</td>
+		  </tr>
+	  </table>
+    </div>
+
+  </body>
+</html>
