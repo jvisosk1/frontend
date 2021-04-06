@@ -45,12 +45,16 @@ function NarrowItDownController(MenuSearchService) {
     promise.then(function (response) {
       console.log("Here are the results for input (" + menu.keyword + ")");
       var menuItems = response.data.menu_items
+      if(menu.keyword == "")
+        menu.keyword = "Nothing found."
       menu.foundItems = []
       for (var i =0; i < menuItems.length; i++) {
         if(menuItems[i].description.includes(menu.keyword)){
           menu.foundItems.push(menuItems[i])
         }
       }
+      if(menu.foundItems.length == 0)
+        menu.keyword = "Nothing found."
     })
     .catch(function (error) {
       console.log(error);
