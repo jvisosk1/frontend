@@ -1,0 +1,15 @@
+<h3>List of Menu Items</h3>
+
+<table class="table">
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Description</th>
+    <th scope="col">Remove Item</th>
+  </tr>
+  <tr ng-repeat="menu_item in menu.items">
+    <td scope="row">{{menu_item.name}} ({{menu_item.short_name}})</td>
+    <td>{{menu_item.description}}</td>
+    <td><button class="btn btn-primary" ng-click="menu.badRemove($index);">Remove</button></td>
+  </tr>
+</table>
+
