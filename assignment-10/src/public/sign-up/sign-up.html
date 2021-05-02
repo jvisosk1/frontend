@@ -1,0 +1,79 @@
+<div class="container">
+  <h2 id="menu-categories-title" class="text-center">
+    Sign up for newsletter
+  </h2>
+  <div class="text-center">
+    <form name='signUpForm' required>
+
+      First name: <br>
+      <input type="text" name="firstname" ng-model="signUpCtrl.user.firstname" 
+        required minlength="1">
+      <span class="errormsg" ng-if="signUpForm.firstname.$invalid && signUpForm.firstname.$touched">
+        <br>Please provide first name.
+      </span>
+      <br><br>
+
+      Last name: <br>
+      <input type="text" name="lastname" ng-model="signUpCtrl.user.lastname" 
+        required minlength="1">
+      <span class="errormsg" ng-if="signUpForm.lastname.$invalid && signUpForm.lastname.$touched">
+        <br>Please provide last name.
+      </span>
+      <br><br>
+
+      Email address: <br>
+      <input type="email" name="email" ng-model="signUpCtrl.user.email" required>
+      <span class="errormsg" ng-if="signUpForm.email.$invalid && signUpForm.email.$touched">
+        <br>Please provide email with 'hello@world' format.
+      </span>
+      <br><br>
+
+      Phone number: <br>
+      <input type="text" name="phone" placeholder="Phone ###-###-####"
+        ng-model="signUpCtrl.user.phone"
+        pattern="(\d{3})-(\d{3})-(\d{4})"
+        required>
+      <span class="errormsg" ng-if="signUpForm.phone.$invalid && signUpForm.phone.$touched">
+        <br>Phone must have format ###-###-####.
+      </span>
+      <br><br>
+
+      Favourite dish (menu number): <br>
+      <input type="text" name="favorite" placeholder="Item number." 
+      	ng-change="signUpCtrl.verifyItem(signUpCtrl.user.favorite)" 
+        ng-model="signUpCtrl.user.favorite" required minlength="1"><br>
+      
+<!-- ORIGINAL MENU ITEM CHECK ON SUBMIT -->
+      <span class="errormsg" ng-if="signUpCtrl.errorMenuLookup">
+        No such menu item exists.
+      </span>
+
+<!-- EMPTY INPUT FIELD AFTER CLICK -->
+      <span class="errormsg" ng-if="signUpForm.favorite.$invalid && signUpForm.favorite.$touched">
+        Please input a menu item.
+      </span>
+
+<!-- INPUT VALUE GIVEN AND NO MENU ITEM FOUND -->
+      <span class="errormsg" ng-if="!signUpCtrl.validItem && signUpForm.favorite.$touched && !signUpForm.favorite.$invalid">
+        No such menu item exists.
+      </span>
+
+<!-- MENU ITEM FOUND AND IS DELICIOUS! -->
+      <span style="color:green" ng-if="signUpCtrl.validItem">
+        GREAT CHOCIE!
+      </span>
+
+      <br><br>
+
+      <button style="background-color: #686868" 
+        ng-disabled="signUpForm.$invalid"  
+        ng-click="signUpCtrl.submit(signUpCtrl.user)">Submit</button>
+      <div style="color: #006600" ng-if="signUpCtrl.successful">
+        <br>Your information has been saved.
+      </div>
+
+    </form>
+  </div>
+
+
+</div>

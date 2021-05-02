@@ -1,0 +1,53 @@
+<div class="container">
+  <h2 class="text-center">
+    <p style="font-size: 40px; color: #4d9900; text-shadow: 2px 2px 5px #264d00;">USER PROFILE DETAILS</p> 
+   </h2>
+  <div class="text-center">
+    <div ng-if="userInfoCtrl.userInfo">
+
+      <table style="margin-right: auto; margin-left: auto;">
+
+        <tr>
+          <td class="table-cell"><strong >First Name:  </strong></td> 
+          <td class="table-cell-right">{{ userInfoCtrl.userInfo.firstname }} </td>
+        </tr>
+
+        <tr>
+          <td class="table-cell"><strong >Last Name:  </strong></td> 
+          <td class="table-cell-right">{{ userInfoCtrl.userInfo.lastname }} </td>
+        </tr>
+
+        <tr>
+          <td class="table-cell"><strong >Email:  </strong></td> 
+          <td class="table-cell-right">{{ userInfoCtrl.userInfo.email }} </td>
+        </tr>
+
+        <tr>
+          <td class="table-cell"><strong >Phone:  </strong></td> 
+          <td class="table-cell-right">{{ userInfoCtrl.userInfo.phone }} </td>
+        </tr>
+
+        <tr>
+          <td class="table-cell"><strong >Favorite Dish:  </strong></td> 
+          <td class="table-cell-right">{{ userInfoCtrl.favoriteName }} </td>
+        </tr>
+
+      </table><br>
+
+      <img
+        class="img-responsive my-img" 
+        width="250" 
+        height="150" 
+        ng-src="{{userInfoCtrl.basePath}}/images/{{userInfoCtrl.userInfo.favorite}}.jpg" 
+        alt ="{{userInfoCtrl.favoriteName}}" >
+      
+      <br>
+      <strong style="color: #4d9900">Description: </strong>{{ userInfoCtrl.favoriteDesc }}
+    </div>
+    <div ng-if="!userInfoCtrl.userInfo">
+      Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+    </div>
+  </div>
+
+
+</div>
