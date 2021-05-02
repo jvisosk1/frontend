@@ -42,11 +42,6 @@
       <input type="text" name="favorite" placeholder="Item number." 
       	ng-change="signUpCtrl.verifyItem(signUpCtrl.user.favorite)" 
         ng-model="signUpCtrl.user.favorite" required minlength="1"><br>
-      
-<!-- ORIGINAL MENU ITEM CHECK ON SUBMIT -->
-      <span class="errormsg" ng-if="signUpCtrl.errorMenuLookup">
-        No such menu item exists.
-      </span>
 
 <!-- EMPTY INPUT FIELD AFTER CLICK -->
       <span class="errormsg" ng-if="signUpForm.favorite.$invalid && signUpForm.favorite.$touched">
