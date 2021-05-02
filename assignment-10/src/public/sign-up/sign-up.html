@@ -44,7 +44,7 @@
         ng-model="signUpCtrl.user.favorite" required minlength="1"><br>
 
 <!-- EMPTY INPUT FIELD AFTER CLICK -->
-      <span class="errormsg" ng-if="signUpForm.favorite.$invalid && signUpForm.favorite.$touched">
+      <span class="errormsg" ng-if="signUpForm.favorite.$invalid && signUpForm.favorite.$touched && !signUpCtrl.validItem">
         Please input a menu item.
       </span>
 
