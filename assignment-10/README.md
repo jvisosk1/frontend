@@ -1,9 +1,7 @@
-# Restaurant
+# Assignment 10 Submission
 
-Restaurant front-end implementation in AngularJS for David Chu's China Bistro.
-
-Enroll in the [complete free course on AngularJS][aeac87f1]
-  [aeac87f1]: https://www.coursera.org/learn/single-page-web-apps-with-angularjs "AngularJS course"
-
-  [Single Page Web Applications with AngularJS][39804538]
-  [39804538]: https://www.coursera.org/learn/single-page-web-apps-with-angularjs "Enroll in the course on AngluarJS"
+Functionality: 
+1. User can sign up for newsletter from 'Sign Up' menu button in top nav bar.
+2. All text fields are immediately validated, including the 'favorite dish' input field. 
+3. Error messages are displayed to user in real time. 
+4. After submitting user profile details, user can view data and details of favorite menu item on the My Info page.
