@@ -8,5 +8,5 @@ Functionality:
 
 I used as starter code the source code provided for Lecture 59.
 
-Below source repository where a partial solution is implemented was referenced in order to better understand how to structure the component, controller, module, and route folders/files.
+Below source with partial solution implemented was referenced in order to better understand how to structure the component, controller, module, and route folders/files.
 https://github.com/skhzhang/coursera-angularjs-intro/tree/master/assignment5-solution
